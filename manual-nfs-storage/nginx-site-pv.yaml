@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nginx-site-pv
+  labels:
+    name: nginx-site-pv # name can be anything
+  namespace: site
+spec:
+  storageClassName: manual # same storage class as pvc
+  capacity:
+    storage: 200Mi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.122.40 # ip addres of nfs server
+    path: "/srv/nfs/data" # path to directory
