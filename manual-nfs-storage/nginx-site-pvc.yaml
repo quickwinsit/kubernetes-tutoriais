@@ -6,7 +6,7 @@ metadata:
 spec:
   storageClassName: manual
   accessModes:
-    - ReadWriteMany #  must be the same as PersistentVolume
+    - ReadWriteMany
   resources:
     requests:
       storage: 50Mi

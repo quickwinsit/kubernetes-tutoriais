@@ -3,14 +3,14 @@ kind: PersistentVolume
 metadata:
   name: nginx-site-pv
   labels:
-    name: nginx-site-pv # name can be anything
+    name: nginx-site-pv
   namespace: site
 spec:
-  storageClassName: manual # same storage class as pvc
+  storageClassName: manual
   capacity:
     storage: 200Mi
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.122.40 # ip addres of nfs server
-    path: "/srv/nfs/data" # path to directory
+    server: 192.168.122.40 
+    path: "/srv/nfs/data" 
